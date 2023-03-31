@@ -155,6 +155,6 @@ https://localhost:5001/api/Animals/1
 
 ## License
 
-[MIT](/LICENSE)
+_[MIT](https://github.com/mdonegan91/ShelterApi.Solution/blob/main/LICENSE)_
 
-Copyright Molly Donegan
+Copyright (c) _2023_ _Molly Donegan_
