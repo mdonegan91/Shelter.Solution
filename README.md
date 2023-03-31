@@ -35,24 +35,24 @@ _Requires console application such as Git Bash, Terminal, or PowerShell_
 
 3. Run the command
 
-    ``cd TravelApi``
+    ``cd ShelterApi``
 
-* You should now have a folder `TravelApi` with the following structure.
-    <pre>TravelApi
+* You should now have a folder `ShelterApi` with the following structure.
+    <pre>ShelterApi
     ├── .gitignore 
     ├── ... 
-    └── TravelApi
+    └── ShelterApi
         ├── Controllers
         ├── Models
         ├── ...
         ├── README.md</pre>
 
-4. Add a file named appsettings.json in the following location, inside TravelApi folder 
+4. Add a file named appsettings.json in the following location, inside ShelterApi folder 
 
-    <pre>TravelApi
+    <pre>ShelterApi
     ├── .gitignore 
     ├── ... 
-    └── TravelApi
+    └── ShelterApi
         ├── Controllers
         ├── Models
         ├── ...
@@ -71,7 +71,7 @@ _Requires console application such as Git Bash, Terminal, or PowerShell_
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;database=travelapi;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
+    "DefaultConnection": "Server=localhost;Port=3306;database=shelter_api;uid=[YOUR-USERNAME-HERE];pwd=[YOUR-PASSWORD-HERE];"
   }
 }
 
@@ -89,8 +89,8 @@ _Requires console application such as Git Bash, Terminal, or PowerShell_
 <strong>To Run</strong>
 
 Navigate to the following directory in the console
-    <pre>TravelApi
-    └── <strong>TravelApi</strong></pre>
+    <pre>ShelterApi
+    └── <strong>ShelterApi</strong></pre>
 
 Run the following command in the console
 
@@ -106,46 +106,44 @@ This program was built using _`Microsoft .NET SDK 6.0`_, and may not be compatib
 Explore the API endpoints in Postman or a browser. You will not be able to utilize authentication in a browser.
 
 ###  Swagger Documentation 
-To view the Swagger documentation for the TravelApi, launch the project using `dotnet run` using Terminal or Powershell, then input the following URL into your browser: `https://localhost:5001/swagger/index.html`
+To view the Swagger documentation for the ShelterApi, launch the project using `dotnet run` using Terminal or Powershell, then input the following URL into your browser: `https://localhost:5001/swagger/index.html`
 
-### Destinations
+### Animals
 
-Get information about different global destinations.
+Get information about different global animals.
 
 #### HTTP Request Structure
 ```
-GET https://localhost:5001/api/Destinations/
-GET https://localhost:5001/api/Destinations/{id}
-POST https://localhost:5001/api/Destinations/
-PUT https://localhost:5001/api/Destinations/{id}
-DELETE https://localhost:5001/api/Destinations/{id}
-GET https://localhost:5001/api/Destinations/page/{page}
+GET https://localhost:5001/api/Animals/
+GET https://localhost:5001/api/Animals/{id}
+POST https://localhost:5001/api/Animals/
+PUT https://localhost:5001/api/Animals/{id}
+DELETE https://localhost:5001/api/Animals/{id}
+GET https://localhost:5001/api/Animals/page/{page}
 ```
-* To utilize the POST request and create a new instance of a destination, the following information is required.
+* To utilize the POST request and create a new instance of a animal, the following information is required.
 ```
 {
-    "destinationId": "int",
-    "country": "string",
-    "city": "string",
-    "review": "string",
-    "rating": "int",
-    "userName": "string"
+    "animalId": "int",
+    "name": "string",
+    "species": "string",
+    "breed": "string",
+    "age": "int",
 }
 ```
 
 #### Example Query
 ```
-https://localhost:5001/api/Destinations/1
+https://localhost:5001/api/Animals/1
 ```
 #### Sample JSON Response
 ```
 {
-    "destinationId": 1,
-    "country": "Switzerland",
-    "city": "Zurich",
-    "review": "Great",
-    "rating": 5,
-    "userName": MollyD
+    "animalId": 1,
+    "name": "Salmon",
+    "species": "Cat",
+    "breed": "Scottish Fold",
+    "age": 7,
 }
 ```
 
@@ -153,10 +151,10 @@ https://localhost:5001/api/Destinations/1
 
 * _No known issues_
 
-* _Reach out with any questions or concerns to [eliot.lauren@gmail.com](eliot.lauren@gmail.com), [mollyrdonegan@gmail.com](mollyrdonegan@gmail.com), [jacobamaier@gmail.com](jacobamaier@gmail.com)_
+* _Reach out with any questions or concerns to [mollyrdonegan@gmail.com](mollyrdonegan@gmail.com)_
 
 ## License
 
 [MIT](/LICENSE)
 
-Copyright Jacob Maier, Molly Donegan, Eliot Gronstal
+Copyright Molly Donegan
